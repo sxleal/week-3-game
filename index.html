@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Hangman</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class = "container">
+		<div class="jumbotron">
+		  <h1 class="text-center">Let's Play Hangman!</h1>
+		  <div class="text-center">
+			  <p>...</p>
+			  <p><a class="btn btn-primary btn-lg" href="#" role="button">PLAY</a></p>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<!--Lists blanks representing word in play-->
+		<div id="hold"></div>
+
+		<!--Creates alphabet letter buttons representing guess -->
+		<div id="buttons"></div>
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+
+<!-- //* var wordArray = ["cat","dog","pig","duck"];
+var targetWord;
+
+var guess;
+var guesses = [];
+var numGuesses = 15;
+var counter ;
+
+//Choose a word 
+targetWord = wordArray[Math.floor(Math.random()*wordArray.length)];
+var targetLetters = targetWord.split("");
+console.log(targetLetters);
+
+letters = document.getElementByID("letters"); 
+*// -->
+
+</script>
+
+</body>
+
+</html>

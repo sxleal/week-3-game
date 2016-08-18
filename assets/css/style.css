@@ -1,0 +1,26 @@
+.letter { 
+	width: 30px; 
+	height: 30px;
+	border-style: solid;
+	padding: 20px;
+	float: left;
+	margin: 2px;
+	 }
+
+.letter-button-color {
+	color: darkcyan;
+}
+
+#buttons {
+	padding: 60px;
+}
+
+.hangLetter {
+	display: inline-block;
+	line-style: none;
+	width: 20px;
+	margin: 0 5px;
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
