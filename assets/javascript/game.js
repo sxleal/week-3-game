@@ -11,50 +11,89 @@ var alphabet = ["A", "B","C","D","E","F","G","H","I","J","K",
 	var targetWord; 	//random word selected
 	var guess;			//User's guess
 	var guesses = [];	//Stored guesses
+	var emptyLetters = []; //starting dashes to be filled
+	var emptyLettersStr= "";	//print the dashes and correct guesses
 	var lives;			//Lives
 	var correct;		//Count orrect guesses
 	var space;			//Number of spaces in targetWord
 
 
-
-//We pick a random word for player to guess
+//We pick a random word for player to guess.  
 	var wordArray = ["cat","dog","pig","duck"];
 	
 
 	targetWord = wordArray[Math.floor(Math.random()*wordArray.length)];
-	console.log(targetWord)
+	console.log(targetWord);
 
 
 
+//Parse targetWord's letters into targetWordArray
+
+	var targetWordArray = targetWord.split("");
+	console.log(targetWordArray);
+
+// Display word to be guessed as dashes.  Use emptyLetters array to print dashes
+	
+		for (var i = 0; i< targetWordArray.length; i++) {
+			emptyLetters.push("_ ");
+		}
+		console.log("emptyLetters", emptyLetters);
+
+		emptyLettersStr = "";
+
+		for (var i = 0; i< emptyLetters.length; i++) {
+			emptyLettersStr = emptyLettersStr + emptyLetters[i];
+		}
+
+		$('#hold').append(emptyLettersStr);
 
 
+//Collect input from user to guess a letter and convert to lowercase
+	
+	document.onkeyup = function(event) {
+		var guess = String.fromCharCode(event.keyCode).toLowerCase();
 
-//We store all the letters and underscore inside of an array called letters
+// Check if guess has been selected before -->not done
+
+		guesses.push(guess);
+		console.log(guess);
 
 
-	for (var i=0; i<alphabet.length; i++) {
-		console.log(alphabet[i]);
-		 var b = $('<button>').addClass("letter letter-button letter-button-color");
-		 b.attr("data-let", alphabet[i]);
-		 b.text(alphabet[i]);
-		 $("#buttons").append(b);
-	}
+//Check targetWordArray to see if letter matches
+//If it's not in the array,
 
-	$('.letter-button').on('click',function() {
-		var Guess = $('<div>').text($(this).data('let'));
-	    	$('#display').append(Guess);
-	    	$('#display').append(Guess);
-	})
+		if (targetWordArray.indexOf(guess) == -1) {
+			// document.querySelector('#picked').innerHTML = 'You chose ' + guess + " This is not a correct guess";
+			
+			$('#picked').append(guess + ", ");
+		}
 
-//Inserts correct guess into dash display
-	result = function () {
-		wordHolder = document.getElementById('hold');
-		correct = document.createElement('ul');
-
-		for (var i=0; i<targetWord.length; i++) {
-			correct.setAttribute('id','myWord')
+		else {
+			document.querySelector('#picked').innerHTML = "YAY, correct";
 		}
 	}
 
 
+		
+/*	
+
+Make it an array and then replace dashes with correct guesses
+
+Create number of guesses available
+Create counter of guesses
+If incorrect guess, deduct counter
+
+If counter at 0, end game
+
+If correct guess, put letter on screen in correct postion
+
+If all letters guessed, Win the game
+
+Reset function to play again
+*/
+
+
+
 });
+
+

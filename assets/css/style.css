@@ -15,6 +15,10 @@
 	padding: 60px;
 }
 
+.guessColor {
+	color:orange;
+}
+
 .hangLetter {
 	display: inline-block;
 	line-style: none;

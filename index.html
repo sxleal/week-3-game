@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.css" crossorigin="anonymous">
 </head>
 
 <body>
@@ -19,15 +20,32 @@
 			  <p><a class="btn btn-primary btn-lg" href="#" role="button">PLAY</a></p>
 		  </div>
 		</div>
-	</div>
+	
 
 	<div class="row">
+		<div class="col-md-12">
 
-		<!--Lists blanks representing word in play-->
-		<div id="hold"></div>
+			<!--Lists blanks representing word in play-->
+			<div id="hold" class="text-center"></div>
 
-		<!--Creates alphabet letter buttons representing guess -->
-		<div id="buttons"></div>
+			<!--Creates alphabet letter buttons representing guess -->
+			<div id="buttons"></div>
+			<hr>
+
+			<!--Displays letters picked-->
+			<div id="picked" class="panel-body">
+				<h2>Letters picked</h2>
+				<p>Enter a letter to start playing...</p>
+			</div>
+
+			<!--Lists lives remaining-->
+			<div id="lives" class="panel-body"><h2>Lives Remaining</h2></div>
+
+		</div>
+
+	</div>
+
+	</div>
 
 
 
@@ -36,22 +54,6 @@
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
-
-<!-- //* var wordArray = ["cat","dog","pig","duck"];
-var targetWord;
-
-var guess;
-var guesses = [];
-var numGuesses = 15;
-var counter ;
-
-//Choose a word 
-targetWord = wordArray[Math.floor(Math.random()*wordArray.length)];
-var targetLetters = targetWord.split("");
-console.log(targetLetters);
-
-letters = document.getElementByID("letters"); 
-*// -->
 
 </script>
 
